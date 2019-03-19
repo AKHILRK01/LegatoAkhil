@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form onsubmit="return validate()">
+
+UserName:
+<input type = "text" placeholder="please enter your name" id="id1" /><br/>
+<span id="error1"></span>
+<br/>
+
+Password:
+<input type = "password" placeholder="please enter your password" id="id2"/><br/>
+<span id ="error2"></span><br/>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlDFsxfrggWr1DUHxkfxeI4uo-rCUxDKUrW_CbuAP6SC3ryrAD" alt="oops"  id="id3" onclick="display()"><br/>
+<span id ="id3"></span><br/>
+
+
+<input type="submit" onclick="validate()" />
+
+</form>
+
+<script>
+
+function validate()
+{
+
+	var name=document.getElementById("id1").value;
+	var password=document.getElementById("id2").value;
+	var patternName = "^[A-Za-z]+$";
+	var patternPassword="^[A-Za-z0=9]+$";
+	
+	if(name.match(patternName) && password.match(patternpassword))
+		{
+		return true;
+		}
+	else if(name.match(patternName)==null && password.match(patternPassword)==null)
+		{
+		document.getElementById("error1").innerHTML="please enter characters only";
+		document.getElementById("error2").innerHTML="password pattern does not matches";
+		return false;
+		}
+	else if(name.match(patternName)==null)
+	{
+	document.getElementById("error1").innerHTML="please enter characters only";
+	document.getElementById("error2").innerHTML="";
+	return false;
+	}
+	else if(password.match(patternPassword)==null)
+	{
+		document.getElementById("error1").innerHTML="";
+		document.getElementById("error2").innerHTML="password pattern does not matches";
+	return false;
+	}
+	
+	}
+
+function display()
+{
+	
+		  var x = document.getElementById("id3");
+		  if (x.type == "password") {
+		    x.type = "text";
+		  } else {
+		    x.type = "password";
+		  }
+		}
+	
+	
+</script>
+
+</body>
+</html>

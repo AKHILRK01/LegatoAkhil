@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+
+UserName:
+<input type = "text" placeholder="please enter your name" id="id1" /><br/>
+<span id="error1"></span>
+<br/>
+
+Password:
+<input type = "password" placeholder="please enter your password" id="id2"/><br/>
+<span id ="error2"></span><br/>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlDFsxfrggWr1DUHxkfxeI4uo-rCUxDKUrW_CbuAP6SC3ryrAD" alt="oops"  id="id3" onclick="display()"><br/>
+<span id ="id3"></span><br/>
+
+
+<input type="submit"/>
+
+</form>
+
+
+<script>
+function display()
+{
+	
+		  var x = document.getElementById("id3");
+		  if (x.type == "password") {
+		    x.type = "text";
+		  } else {
+		    x.type = "password";
+		  }
+		}
+		
+</script>
+
+</body>
+</html>

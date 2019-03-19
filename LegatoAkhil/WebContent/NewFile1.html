@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+h1{"background-color:light-blue"};
+</style>
+</head>
+<body>
+<form action="LoginServlet">
+
+
+UserName:
+<input type = "text" placeholder="please enter your name" name="username" id="id1" /><br/>
+<span id="error1"></span>
+<br/>
+
+Password:
+<input type = "text" placeholder="please enter your password"  name="password" id="id2"/><br/>
+<span id ="error2"></span><br/>
+
+
+<input type="submit" onclick="validate()" />
+
+<span id="time"></span>
+<!-- 
+<script>
+ 
+setInterval(getTime, 1000);
+
+function getTime() {
+  var d = new Date();
+  document.getElementById("time").innerHTML = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("time").innerHTML = t;
+}
+
+
+function validate()
+{
+	var name=document.getElementById("id1").value;
+	var password=document.getElementById("id2").value;
+	
+	if(name.trim().toLowerCase()=="admin" && password.trim()=="admin")
+		{
+	return true;
+		}
+	
+	else if(name.trim()=="" && password.trim=="")
+	{
+	document.getElementById("error1").innerHTML="name cannot spaces";
+	document.getElementById("error2").innerHTML="password can have spaces ";
+	return false;
+	}
+else if(name.trim()=="")
+{
+document.getElementById("error1").innerHTML="name cannot spaces";
+document.getElementById("error2").innerHTML="";
+return false;
+}
+else if(password.trim()=="")
+{
+	document.getElementById("error1").innerHTML="";
+	document.getElementById("error2").innerHTML="password can have spaces ";
+return false;
+}
+else 
+	{
+	
+	document.getElementById("error1").innerHTML="invalid username";
+	document.getElementById("error2").innerHTML="invalid password";
+	return false;
+	}
+	
+}
+
+
+
+</script>-->
+
+</form>
+</body>
+</html>
